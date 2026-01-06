@@ -64,7 +64,7 @@ bool IntList::contains(int value) const {
 
 // returns maximum value in list, or 0 if empty list
 int IntList::max() const {
-  int max = INT_MIN; //initialize max to the lowest possible min
+  int max = 0; //initialize max to the lowest possible min
   Node* n = head; //head tracker
   while (n != nullptr) { //n must not be null
     if (n->info > max) { //check if the current value is bigger than the int max
@@ -87,7 +87,7 @@ double IntList::average() const {
     n = n->next; //move n forward by one node
   }
   if (len == 0.0) { //zero length
-    return -0.00000000001; //return wild number
+    return 0.000; //return number as given
   }
   return sum / len; //the average is the sum over the length
 }
@@ -184,4 +184,3 @@ void IntList::print() const {
     }
     cout << ']';
 }
-//good

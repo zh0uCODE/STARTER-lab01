@@ -5,7 +5,6 @@
 
 #include <cstdlib> // provides atoi
 #include <iostream>
-
 #include <cassert>
 
 using namespace std;
@@ -18,8 +17,6 @@ void test_copyconstructor(){
     }
 
     IntList list2(list1);
-    cout << "list 1 count = " << list1.count() << endl;
-    list1.print();
     assert(list1.count()== 5);
     assert(list2.count()==list1.count());
     for(int i = 0; i<5; i++){
@@ -50,24 +47,11 @@ void test_assignmentOperator(){
     for(int i = 0; i<5; i++){
         list2.push_back(2*arr[i]);
     }
-    cout << "list 1 before testing" << endl;
-    list1.print();
-    cout << endl;
-    cout << "list 2 before testing" << endl;
-    list2.print();
-
-
     list2 = list1;
-    cout << "list 2 after testing" << endl;
-    list2.print();
 
     assert(list2.sum()==list1.sum());
 
     list1.push_back(100);
-    cout << "list 1 after push back" << endl;
-    list1.print();
-    cout << list2.sum() << endl;
-    cout << list1.sum() << endl;
     assert((list2.sum()+100) == list1.sum());
 
     list1 = IntList();
@@ -98,4 +82,4 @@ int main(int argc, char* argv[]) {
     }
 
     return 0;
-}//good
+}
