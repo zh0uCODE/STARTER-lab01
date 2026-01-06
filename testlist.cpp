@@ -1,4 +1,4 @@
-// testlist.cpp
+// tiestlist.cpp
 // Tests intlist.cpp
 
 #include "intlist.h"
